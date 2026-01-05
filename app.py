@@ -5,7 +5,7 @@ from dashboard import dashboard
 from alerts import alerts
 from reports import reports
 from settings import settings
-from upload import upload
+#from upload import upload
 
 st.set_page_config(
     page_title="Merchant Payment Reliability Platform",
@@ -29,7 +29,7 @@ else:
 
     module = st.sidebar.radio(
         "Select Module",
-        ["📊 Dashboard", "🚨 Alerts", "📁 Reports", "📤 Upload", "⚙️ Settings"],
+        ["Dashboard", "Alerts", "Reports", "Settings"],
         label_visibility="collapsed"
     )
 
@@ -39,13 +39,13 @@ else:
         st.rerun()
 
     # ---------- Module Routing ----------
-    if module == "📊 Dashboard":
+    if module == "Dashboard":
         dashboard()
-    elif module == "🚨 Alerts":
+    elif module == "Alerts":
         alerts()
-    elif module == "📁 Reports":
+    elif module == "Reports":
         reports()
-    elif module == "📤 Upload":
-        upload()
-    elif module == "⚙️ Settings":
+    #elif module == "📤 Upload":
+       #upload()
+    elif module == "Settings":
         settings()
